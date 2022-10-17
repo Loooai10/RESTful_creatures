@@ -1,0 +1,13 @@
+<ul>
+    <% myDinos.forEach((dino, idx) => { %>
+    <a href="/prehisstoric_creatures/<%= idx %>">
+
+      <li><%= dino.name %> is a <%= dino.type %></li>
+      <a href="/pregistoric_creatures/edit/<%= idx %>">Edit</a>
+    
+    <form method="POST" action="/pregistoric_creatures/<%= idx %>/?_method=DELETE">
+      <input type="submit" value="Delete">
+  </form>
+</a>
+<% }); %>
+  </ul>
